@@ -174,3 +174,67 @@ git remote -v
 ```shell
 git remote add origin url-do-repositório
 ```
+
+### Salvando as alterações no repositório local
+
+#### Para ver o status atual dos arquivos
+
+```shell
+git status
+```
+
+#### Adicionar os arquivos ao versionamento do Git
+
+##### Todos os arquivos não ocultos
+
+```shell
+git add *
+```
+
+##### Todos os arquivos inclusive os ocultos
+
+```shell
+git add .
+```
+
+##### Um ou mais aquivos específicos
+
+```shell
+git add exemplo01.txt exemplo02.txt
+```
+
+Obs.: O Git não reconhece pastas sem arquivos. A convenção para pastas vazias é criar um arquivo oculto .gitkeep na pasta
+
+```shell
+echo pasta_vazia/.gitkeep
+```
+
+### Inserir os arquivos na nova versão
+
+```shell
+git commit -m "commit inicial"
+```
+
+#### Exibe o histórico de commits
+
+```shell
+git log
+```
+
+#### Exibe o histórico somente as mensagens dos commits
+
+```shell
+git reflog
+```
+
+### Ignorar pastas e arquivos
+
+para ignorar pastas e arquivos, cria-se na raiz do projeto um arquivo oculto .gitignore contendo os caminhos.
+
+#### Exemplo de arquio .gitignore:
+
+```txt
+pasta/
+arquivo.txt
+*.c
+```
