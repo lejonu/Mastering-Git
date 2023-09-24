@@ -70,3 +70,73 @@ git config init.defaultBranch main
 #### Global:
 
 git config --global init.defaultBranch main
+
+### Autenticação
+
+### Autenticando via token
+
+- No GitHub vá na foto do usuário e selecione settings
+- Na barra de menus selecione Developer settings
+- Clique em Personal access token -> tokens(classic)
+- Cliquen Generate new tokeon -> Generate new token(classic)
+- Dê um nome para o token. Ex: Curso Git
+- Selecione o prazo de expiração
+- Selecione o escopo de acesso e clique em Generate token
+- Copie o token
+
+  Importante!!! : ao sair da página o token não será mais visto.
+
+Ao conectar com um repositório usar o token gerado como password.
+
+#### Salvar token na máquina
+
+```shell
+# máquina compartilhada com outros usuários
+git config credential.helper cache
+```
+
+```shell
+# máquina com único usuário
+git config --global credential.helper store
+```
+
+### Autenticação via SSH
+
+Começar verificando se existe a chave em nossa máquina.
+
+```shell
+ls -al ~/.ssh
+```
+
+\* Caso já exista a chave, você deverá decidir se usará a existe ou se irá deletá-la e criar uma nova.
+
+#### Gerar nova chave ssh
+
+```shell
+# Usar o mesmo email do GitHub
+ssh-keygen -t ed25519 -C "email@servidor"
+```
+
+#### Adicionar sua chave SSH ao ssh-agent
+
+Iniciar o SSH agent
+
+```shell
+eval "$(ssh-agent -s)"
+```
+
+Adicionar a chave privada ao ssh agent
+
+```shell
+ssh-add ~/.ssh/id_ed25519
+```
+
+#### Adicionar a chave criada ou pré-existente ao GitHub
+
+Abra o arquivo que contém a chave
+
+```shell
+cat ~/.ssh/id_ed25519.pub
+```
+
+copie a chave que começa com ssh e cole no campo indicado pelo GitHub.
