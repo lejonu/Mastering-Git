@@ -60,3 +60,13 @@ git config  --list
 # Retorna somente as configurações globais
 git config --global --list
 ```
+
+### Alterando o Branch padrão
+
+#### Local:
+
+git config init.defaultBranch main
+
+#### Global:
+
+git config --global init.defaultBranch main
