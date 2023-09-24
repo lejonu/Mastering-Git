@@ -140,3 +140,37 @@ cat ~/.ssh/id_ed25519.pub
 ```
 
 copie a chave que começa com ssh e cole no campo indicado pelo GitHub.
+
+### Criando um repositório local
+
+Na pasta do projeto que se deseja versionar:
+
+```shell
+git init
+```
+
+Este comando criará a pasta oculta .git com os arquivos iniciais de configuração do Git.
+
+### Clonar um repositório existente no GitHub
+
+```shell
+git clone <nome-do-repositório>
+```
+
+#### Clonar um repositório existente no GitHub alterando o nome
+
+```shell
+git clone git@github.com:lejonu/Mastering-Git.git Mastering-Git-Clonado
+```
+
+#### Mostra os repositórios que estão vinculados.
+
+```shell
+git remote -v
+```
+
+#### Vincula o repositório local ao remoto
+
+```shell
+git remote add origin url-do-repositório
+```
