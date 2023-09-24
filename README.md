@@ -231,7 +231,11 @@ git reflog
 
 para ignorar pastas e arquivos, cria-se na raiz do projeto um arquivo oculto .gitignore contendo os caminhos.
 
+<<<<<<< HEAD
 #### Exemplo de arquio .gitignore:
+=======
+#### Exemplo de arquivo .gitignore:
+>>>>>>> b3ab810 (Salvando as alterações no repositório local)
 
 ```txt
 pasta/
