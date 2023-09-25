@@ -108,7 +108,7 @@ Começar verificando se existe a chave em nossa máquina.
 ls -al ~/.ssh
 ```
 
-\* Caso já exista a chave, você deverá decidir se usará a existe ou se irá deletá-la e criar uma nova.
+\* Caso já exista a chave, você deverá decidir se usará a existente ou se irá deletá-la e criar uma nova.
 
 #### Gerar nova chave ssh
 
