@@ -231,14 +231,76 @@ git reflog
 
 para ignorar pastas e arquivos, cria-se na raiz do projeto um arquivo oculto .gitignore contendo os caminhos.
 
-<<<<<<< HEAD
-#### Exemplo de arquio .gitignore:
-=======
 #### Exemplo de arquivo .gitignore:
->>>>>>> b3ab810 (Salvando as alterações no repositório local)
 
 ```txt
 pasta/
 arquivo.txt
 *.c
+```
+
+### Desfazendo Alteracões no Repositório Local
+
+#### Retorna ao último estado do arquivo:
+
+```shell
+git restore <arquivo>
+```
+
+Atenção! Este comando irá descartar todas as alterações feitas no arquivo ou nos arquivos
+
+#### Altera a última mensagem de commit ou adiciona novos arquivos ao último commit:
+
+```shell
+git commit --amend -m "Esta será a mensagem do último commit"
+```
+
+```shell
+git commit --amend -m
+```
+
+#### Desfazer o commit:
+
+```shell
+git log
+```
+
+Copiar o hash do commit a ser desfeito.
+
+1. Retorna ao estado do hash informado e os arquivos posteriores para staging area:
+
+```shell
+git reset --soft <hash>
+```
+
+2. Retorna ao estado do hash informado e os arquivos para untraked files(comportamento padrão):
+
+```shell
+git reset --mixed <hash>
+```
+
+3. Retorna ao estado do hash informado, apagando os arquivos posteriores:
+
+Cuidado!!!
+
+```shell
+git reset --hard <hash>
+```
+
+#### Descrição Detalhada dos Commits
+
+```shell
+git reflog
+```
+
+#### Retirar arquivos da área de preparação:
+
+```shell
+git reset <arquivo>
+```
+
+Outra opção:
+
+```shell
+git restore staged <arquivo>
 ```
