@@ -458,3 +458,9 @@ git stash pop
 ```shell
 git stash apply
 ```
+
+TODO Olhar amanhã
+
+```shell
+git rebase origin main
+```
