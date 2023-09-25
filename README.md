@@ -1,6 +1,6 @@
 # Mastering Git
 
-### Resumo do curso DIO Versionamento de Código com Git e GitHub - com Elidiana Andrade
+###### Resumo do curso DIO Versionamento de Código com Git e GitHub - com Elidiana Andrade
 
 ## Instalação no Ubuntu
 
@@ -15,7 +15,7 @@ git --version
 git version 2.42.0
 ```
 
-## Configurções do Git
+## Configurações do Git
 
 #### Configurações Locais
 
