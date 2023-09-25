@@ -398,3 +398,63 @@ Enviar para o repositório
 ```shell
 git push origin main
 ```
+
+### Trabalhando com Branches - Comandos Úteis no Dia a Dia
+
+#### Baixar as atualizações do repositório remoto sem mesclar com o repositório local:
+
+```shell
+git fetch origin main
+```
+
+#### Ver as diferencças entre as branches:
+
+```shell
+git diff main origin/main
+```
+
+#### Mesclar as alterações ao repositório local após ter utilizado o git fetch:
+
+```shell
+git merge main origin/main
+```
+
+#### Clonar apenas uma branch de um repositório:
+
+```shell
+git clone <url-repositório> --branch teste --single-branch
+```
+
+Obs.: Caso não seja informada a branch que deseja clonar, o git irá clonar apenas a branch principal.
+
+#### Criar nova branch sem as modificações no stage. Arquiva a modificação:
+
+```shell
+git stash
+```
+
+####Lista as modificações arquivadas:
+
+```shell
+git stash list
+```
+
+#### Cria nova branch:
+
+```shell
+git checkout -b teste
+```
+
+#### Trazer a modificação arquivada de volta para a branch:
+
+1. Exclui a alteração mais recente da lista arquivada:
+
+```shell
+git stash pop
+```
+
+2. Mantém a modificação na lista do stash para uso futuro:
+
+```shell
+git stash apply
+```
