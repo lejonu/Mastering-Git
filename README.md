@@ -324,3 +324,15 @@ git git branch -M main <repositório>
 ```shell
 git push -u origin main
 ```
+
+### Editor remoto
+
+Para abrir o editor remoto pressione a tecla (. ponto) no GitHub.
+
+Ao editar remotamente o arquivo, as alterações não aparecerão no repositório local.
+
+Será preciso fazer o pull do repositório.
+
+```shell
+git pull
+```
