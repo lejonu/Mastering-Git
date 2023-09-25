@@ -304,3 +304,23 @@ Outra opção:
 ```shell
 git restore staged <arquivo>
 ```
+
+### Enviando e Baixando Alterações com o Repositório Remoto
+
+#### Enviar para um repositório existente no GitHub
+
+```shell
+git remote add origin <repositório>
+```
+
+#### Renomeia a branch caso você esteja trabalhando com a branch master:
+
+```shell
+git git branch -M main <repositório>
+```
+
+#### Envia as alterações do repositório Local para o Remoto:
+
+```shell
+git push -u origin main
+```
