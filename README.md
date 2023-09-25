@@ -459,8 +459,3 @@ git stash pop
 git stash apply
 ```
 
-Criando conflito para resolver
-
-```shell
-git rebase origin main
-```
