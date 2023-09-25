@@ -336,3 +336,65 @@ Será preciso fazer o pull do repositório.
 ```shell
 git pull
 ```
+
+### Trabalhando com Branches - Criando, Mesclando, Deletando e Tratando Conflitos
+
+Para ver as branches
+
+```shell
+git log
+```
+
+#### Direciona para a branch indicada, se não existir, cria a nova branch:
+
+```shell
+git checkout -b <nome>
+```
+
+#### Lista o último commit de cada branch:
+
+```shell
+git branch -v
+```
+
+#### Mesclar a branch desejada com o a branch em uso:
+
+```shell
+git merge <nome-da-branch-a-ser-mesclada>
+```
+
+#### Excluir a branch desejada da branch em uso:
+
+```shell
+git merge git branch -d <nome-da-branch-a-ser-excluída>
+```
+
+### Resolvendo Conflitos de versões
+
+#### Baixar as alterações feitas remotamente:
+
+```shell
+git pull
+```
+
+Decidir qual das alterações deve ser mantida e indicar para o Git.
+
+Deletar as linhas que não serão aprovadas.
+
+Adicionar o arquivo ao stage.
+
+```shell
+git add .
+```
+
+Fazer novo commit
+
+```shell
+git commit
+```
+
+Enviar para o repositório
+
+```shell
+git push origin main
+```
